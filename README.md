@@ -31,3 +31,22 @@ Then don't forget that in simulation the robot has many captors:
 
 so if we were to implement that IRL we would have to add sensors on the robots.
 
+
+### Environment
+In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
+
+The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+
+### Files
+The `model.py` and `ddpg_agent.py` files are from the folder on ddpg-pendulum made by Udacity.
+
+The `DDPG_continuous_control.ipynb` notebook is the part where we can train and watch a "smart" agent evolving in the Unity environment.
+
+The `checkpoint_actor.pth` and `checkpoint_critic.pth` files are saving of the weights of the locals actor and critic. Those can be downloaded to watch a "smart" agent.
+
+The 'Report.pdf' file explains how the algorithm works and contains different training examples.
+
+### Resources
+- [BATCH NORMALIZATION](https://arxiv.org/abs/1502.03167)
+- [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING](https://arxiv.org/abs/1509.02971)
+- [PARAMETER SPACE NOISE FOR EXPLORATION](https://arxiv.org/pdf/1706.01905.pdf)
