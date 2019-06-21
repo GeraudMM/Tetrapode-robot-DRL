@@ -31,9 +31,9 @@ Then, I began to train the robot using the [DDPG](https://towardsdatascience.com
 The problem here, though, is that the physic of a tetrapod robot is quit hard and I found that the simulation of Unity couldn't led me to expoitable results for implementation in real life. 
 
 To solve this problem, I can think to three different solutions:
-- At first, we could just try to change the software to a more complex one when talking about physics as OpenAI used for their spider
--or, we could try to give robustesse(non anglais) to the robot by training its neural networks on various slightly differentes physic reality like [OpenAI](https://openai.com/) did with [this hand](https://openai.com/blog/learning-dexterity/).
--Finally, we could directly train the neural network in real life like [here](https://www.youtube.com/watch?v=V05SuCSRAtg). Though it must require the minimum of human intervention so that we can let it train almost alone.
+ - At first, we could just try to change the software to a more complex one when talking about physics as OpenAI used for their spider
+ - Or, we could try to give robustesse(non anglais) to the robot by training its neural networks on various slightly differentes physic reality like [OpenAI](https://openai.com/) did with [this hand](https://openai.com/blog/learning-dexterity/).
+ - Finally, we could directly train the neural network in real life like [here](https://www.youtube.com/watch?v=V05SuCSRAtg). Though it must require the minimum of human intervention so that we can let it train almost alone.
 
 Finally, the simulation is interesteing because even if it's not physicly perfect, it can show us various way to program an efficient walk for the robot.
 
@@ -57,8 +57,8 @@ The `MYTETRAPODE_Checkpoint.pth` file is a saving of the weights of the locals a
 The 'Report.pdf' file explains how the algorithm works and contains different training examples.
 
 ### Resources
-- [BATCH NORMALIZATION](https://arxiv.org/abs/1502.03167)
-- [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING](https://arxiv.org/abs/1509.02971)
-- [PARAMETER SPACE NOISE FOR EXPLORATION](https://arxiv.org/pdf/1706.01905.pdf)
+- [BATCH Normalization](https://arxiv.org/abs/1502.03167)
+- [Continuous Control with Deep Reinforcement Learning](https://arxiv.org/abs/1509.02971)
+- [Parameter Space Noise For Exploration](https://arxiv.org/pdf/1706.01905.pdf)
 - [Transfer from Simulation to Real World through Learning Deep Inverse Dynamics Model](https://arxiv.org/abs/1610.03518)
 - [Proximal Policy Optimization](https://arxiv.org/abs/1707.06347)
