@@ -10,19 +10,23 @@
 # Tetrapode-robot-learning-to-walk-thanks-to-Deep-Reinforcement-Learning
 In this project, the goal is to teach the robot to walk in a Unity simulation using the PPO (Proximal Policy Optimization) algorithm for Deep Reinforcement Learning.
 
-![trained Agent][image1]
-
 ### Introduction
 This project follows a school project where we had to design and build a four-legged robot capable of walking in a straight line. This robot consists of a 30 cm long body and four 30 cm arms, each containing three servomotors. To do this, we designed a model of each required part using Catia software, which we then printed in 3D. Once these parts were assembled with the 12 dynamixel motors, we programmed them using an OpenCM card that is similar to an Arduino card. The programming of the walk was done by following two different solutions. The first consists of a polynomial interpolation of the motor angles according to the position of the tool marks (at the end of the arm). The second is to create a simulation of the robot using Matlab's Robotics Toolbox module.
 
+#### With Polynomial Interpolation
+![Tetrapode Robot][image3] 
 
-
-![Tetrapode Robot][image3] ![Tetrapode Robot][image4] 
+#### With the simulation on Matlab
+![Tetrapode Robot][image4] 
 
 ### Deep Reinforcement learning
 Now, in this project, I tried a third solution which is called [Deep Reinforcement Learning](https://en.wikipedia.org/wiki/Deep_reinforcement_learning). Basically, it gives the agent the ability to distinguish which combination of actions seems to lead to good results from those that lead to bad.
 To begin, I have modified the [crawler](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md) environment  to create my own environment where I could train the tetrapode robot. This environments are made on Unity using the [ml-agents](https://github.com/Unity-Technologies/ml-agents/) provided by Unity-Technologies.
 Then, I began to train the robot using the [DDPG](https://towardsdatascience.com/deep-deterministic-policy-gradients-explained-2d94655a9b7b)(Deep Deterministic Policy Gradient) algorithm as I used in the [continuous control project](https://github.com/GeraudMM/Continuous-Control-with-DeepRL/blob/master/README.md) from Udacity but it wasn't working very well so I tried the [PPO algorithm](https://github.com/ZeratuuLL/Reinforcement-Learning/blob/master/Continuous%20Control/Crawler/Crawler.ipynb) from [Lifeng Wei](https://github.com/ZeratuuLL) and it directly leds to better results. Then I made some slight changes to the environment and algorithm to get better results. Finally, it manages to walk effectively in a straight line for now. Latter it shouldn't be harder to teach it to walk in whatever direction we choose. [See what can be done].
+
+here is an example of what has results from the simulation:
+![trained Agent][image1]
+
 ### Issues and possible solutions
 The problem here, though, is that the physic of a tetrapod robot is quit hard and I found that the simulation of Unity couldn't led me to expoitable results for implementation in real life. 
 
