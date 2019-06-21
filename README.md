@@ -2,6 +2,8 @@
 
 [image1]: walking.gif "Trained Agent"
 [image2]: couverture.png "Tetrapode"
+[image3]: SlawRealWalk.gif "SlawRealWalk"
+[image4]: FastRealWalk.gif "FastRealWalk"
 
 
 
@@ -13,9 +15,9 @@ In this project, the goal is to teach the robot to walk in a Unity simulation us
 ### Introduction
 This project follows a school project where we had to design and build a four-legged robot capable of walking in a straight line. This robot consists of a 30 cm long body and four 30 cm arms, each containing three servomotors. To do this, we designed a model of each required part using Catia software, which we then printed in 3D. Once these parts were assembled with the 12 dynamixel motors, we programmed them using an OpenCM card that is similar to an Arduino card. The programming of the walk was done by following two different solutions. The first consists of a polynomial interpolation of the motor angles according to the position of the tool marks (at the end of the arm). The second is to create a simulation of the robot using Matlab's Robotics Toolbox module.
 
-Translated with www.DeepL.com/Translator
 
-![Tetrapode Robot][image2] 
+
+![Tetrapode Robot][image3] ![Tetrapode Robot][image4] 
 
 ### Deep Reinforcement learning
 Now, in this project, I tried a third solution which is called [Deep Reinforcement Learning](https://en.wikipedia.org/wiki/Deep_reinforcement_learning). Basically, it gives the agent the ability to distinguish which combination of actions seems to lead to good results from those that lead to bad.
