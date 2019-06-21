@@ -6,19 +6,29 @@
 
 
 # Tetrapode-robot-learning-to-walk-thanks-to-Deep-Reinforcement-Learning
-In this project I try to learn to the robot to walk in a Unity simulation using the PPO(Proximal Policy Optimization) algorithm for Deep Reinforcement Learning
+In this project, I try to teach the robot to walk in a Unity simulation using the PPO (Proximal Policy Optimization) algorithm for Deep Reinforcement Learning.
 
 ![trained Agent][image1]
 
-This project follow a school project where we had to design and build a quadripod robot able of walking in a straight line. This robot will consist of a 30 cm long body and four 30 cm arms  containing three servomotors each. To do this, we have design a model of each necessary part using the Catia software that we have then print in 3D. Once these parts have been assembled to the 12 dynamixel motors, we have done the programation using an OpenCM card which is similar to an Arduino card. The programming of the operation has be done by following two different solutions. The first one consists of a polynomial interpolation of the motor angles according to the position of the tool marks (at the end of the arm). The second involves to create a simulation of the robot using the Robotics Toolbox module on Matlab.
+### Introduction
+This project follows a school project where we had to design and build a four-legged robot capable of walking in a straight line. This robot consists of a 30 cm long body and four 30 cm arms, each containing three servomotors. To do this, we designed a model of each required part using Catia software, which we then printed in 3D. Once these parts were assembled with the 12 dynamixel motors, we programmed them using an OpenCM card that is similar to an Arduino card. The programming of the walk was done by following two different solutions. The first consists of a polynomial interpolation of the motor angles according to the position of the tool marks (at the end of the arm). The second is to create a simulation of the robot using Matlab's Robotics Toolbox module.
+
+Translated with www.DeepL.com/Translator
 
 ![Tetrapode Robot][image2] 
 
-Now, in this project, I have at first modified the reacher environment (link) to create my own environment for training the tetrapode then, I tried to train the robot using the DDPG algorithm but it wasn't working very well so I tried the PPO algorithm from (citer le gars a qui j'ai pris l'algorithme) and it led to better results. Then I modified the environment and the algorithm so that it works well. The problem here, though, is that the physic of a tetrapod robot is quit hard and the simulation of Unity isn't satysfying. It seems to be too far from reality to lead to good results in real life. 
+### Deep Reinforcement learning
+Now, in this project, I tried a third solution which is called [Deep Reinforcement Learning](https://en.wikipedia.org/wiki/Deep_reinforcement_learning). Basically it give the ability to the agent to distinct what combination of action seems to lead to good results from which ones leads to bad ones.
+To begin, I have modified the [crawler](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md) environment  to create my own environment where I could train the tetrapode.
+Then, I tried to train the robot using the DDPG algorithm as I used in the [continuous control project](https://github.com/GeraudMM/Continuous-Control-with-DeepRL/blob/master/README.md) from Udacity but it wasn't working very well so I tried the [PPO algorithm](https://github.com/ZeratuuLL/Reinforcement-Learning/blob/master/Continuous%20Control/Crawler/Crawler.ipynb) from [Lifeng Wei](https://github.com/ZeratuuLL) and it directly led to better results. Then I modified the environment and the algorithm slightly by slightly in order to get better results. 
+
+### Issues and possible solutions
+The problem here, though, is that the physic of a tetrapod robot is quit hard and I found that the simulation of Unity couldn't led me to expoitable results for implementation in real life. 
+
 To solve this problem, I can think to three different solutions:
-- At first, we could just try to change the software to a more complex one when talking about physics
--or, we could try to give robustesse(non anglais) to the robot by training its neural networks on various slightly differentes physic reality( link to the page of OpenAI sur le bras robotique)
--Finally, we could directly train the neural network in real life. The problem is that it could needs human intervention and take many many time (links to the robots learning IRL, many links if needed)
+- At first, we could just try to change the software to a more complex one when talking about physics as OpenAI used for their spider
+-or, we could try to give robustesse(non anglais) to the robot by training its neural networks on various slightly differentes physic reality like [OpenAI](https://openai.com/) did with [this hand](https://openai.com/blog/learning-dexterity/).
+-Finally, we could directly train the neural network in real life like [here](https://www.youtube.com/watch?v=V05SuCSRAtg). Though it must require the minimum of human intervention so that we can let it train almost alone.
 
 Finally, the simulation is interesteing because even if it's not physicly perfect, it can show us various way to program an efficient walk for the robot.
 Then don't forget that in simulation the robot has many captors:
