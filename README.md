@@ -24,7 +24,7 @@ Now, in this project, I tried a third solution which is called [Deep Reinforceme
 To begin, I have modified the [crawler](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md) environment  to create my own environment where I could train the tetrapode robot. This environments are made on Unity using the [ml-agents](https://github.com/Unity-Technologies/ml-agents/) provided by Unity-Technologies.
 Then, I began to train the robot using the [DDPG](https://towardsdatascience.com/deep-deterministic-policy-gradients-explained-2d94655a9b7b)(Deep Deterministic Policy Gradient) algorithm as I used in the [continuous control project](https://github.com/GeraudMM/Continuous-Control-with-DeepRL/blob/master/README.md) from Udacity but it wasn't working very well so I tried the [PPO algorithm](https://github.com/ZeratuuLL/Reinforcement-Learning/blob/master/Continuous%20Control/Crawler/Crawler.ipynb) from [Lifeng Wei](https://github.com/ZeratuuLL) and it directly leds to better results. Then I made some slight changes to the environment and algorithm to get better results. Finally, it manages to walk effectively in a straight line for now. Latter it shouldn't be harder to teach it to walk in whatever direction we choose. [See what can be done].
 
-here is an example of what has results from the simulation:
+#### With the PPO algorithm on a Unity environment
 ![trained Agent][image1]
 
 ### Issues and possible solutions
