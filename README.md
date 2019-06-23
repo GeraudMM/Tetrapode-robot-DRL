@@ -12,6 +12,7 @@ In this project, the goal is to teach a four legged robot to walk in a Unity sim
 
 ### Introduction
 This project follows a school project where we had with another student to design and build a four-legged robot capable of walking in a straight line. This robot consists of a 30 cm long body and four 30 cm arms, each containing three servomotors. To do this, we designed a model of each required part using Catia software, which we then printed in 3D. Once these parts were assembled with the 12 dynamixel motors, we programmed them using an OpenCM card that is similar to an Arduino card. The programming of the walk was done by following two different solutions. The first consists of a polynomial interpolation of the motor angles according to the position of the tool marks (at the end of the arm). The second is to create a simulation of the robot using Matlab's [Robotics Toolbox](https://petercorke.com/wordpress/toolboxes/robotics-toolbox) module made by peter corke.
+
 [Here](Report_robot_tetrapode_2018_2019.pdf) is the french report of our school project made with Thomas Archer.
 
 #### With Polynomial Interpolation
