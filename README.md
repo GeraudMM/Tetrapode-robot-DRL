@@ -37,7 +37,7 @@ To solve this problem, I can think to three different solutions:
  - Or, we could try to give robustness to the robot by training its neural networks on various slightly differentes physic reality like [OpenAI](https://openai.com/) did with [this hand](https://openai.com/blog/learning-dexterity/).
  - Finally, we could directly train the neural network in real life like [here](https://www.youtube.com/watch?v=V05SuCSRAtg). Though it must require the minimum of human intervention so that we can let it train almost alone for a long time.
 
-Finally, the simulation is interesteing because even if it's not physicly perfect, it can show us various way to program an efficient walk for the robot.
+Finally, the simulation is interesteing because even if it's not physicly perfect, it can show us various ways to program an efficient walk for the robot.
 
 ### Environment
 In this environment, a reward of +0.1 is provided when the body is facing the goal direction and a reward of +0.03 is provided when the body speed is facing the goal direction too.
